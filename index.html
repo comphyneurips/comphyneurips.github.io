@@ -1,0 +1,263 @@
+
+<html lang="en" class="CLEVRER_csail_mit_edu">
+
+<head>
+    <!-- Required meta tags -->
+    <title>CLEVRER</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords"
+        content="video, reasoning, physics, deep learning, computer vision, machine learning">
+    <meta name="description" content="CLEVRER: CoLlision Events for Video REpresentation and Reasoning">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-81724582-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
+        gtag('config', 'UA-81724582-4');
+    </script>
+
+    <style>
+        body {
+            font-size: 16px
+        }
+        .navbar-fixed-top {
+            min-height: 60px;
+        }
+
+        .navbar-nav>li>a {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            line-height: 60px;
+            font-size: 22px;
+            color:gray;
+        }
+        
+        .navbar-nav>li>a:active {
+            color:white;
+        }
+        
+        .navbar-nav>li>a:hover {
+            color:white;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color:transparent;
+            outline:none;
+            background:none;
+            text-decoration: none;
+        }
+        
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+</head>
+
+
+
+<body data-gr-c-s-loaded="true">
+    <nav class="navbar-fixed-top" style="background-color: rgb(44, 42, 42)">
+        <a class="navbar-brand" href="#" style="font-size: 25px; color:white">CLEVRER</a>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="nav navbar-nav mr-auto" >
+                <li><a href="#Paper" style="font-size: 20px">Paper</a></li>
+                <li><a href="#Dataset" style="font-size: 20px">Dataset</a></li>
+                 <li><a href="#Example" style="font-size: 20px">Example</a></li>
+                <li><a href="#More" style="font-size: 20px">More</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <main role="main">
+        <div class="container" style="padding-top: 80px; font-size: 20px">
+            <div align="center">
+                <h1 class="text-center" aligh="center">
+                    ComPhy: Compositional Physical Reasoning ofObjects and Events from Videos
+                </h1><br>
+                 <a href="https://zfchenunique.github.io/"><b>Zhenfang Chen</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://scholar.google.com/citations?user=SwxS_JkAAAAJ&hl=en"><b>Kexin Yi</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://people.csail.mit.edu/liyunzhu/"><b>Yunzhu Li</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="https://dingmyu.github.io/"><b>Mingyu Ding</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <br>
+                <a href="https://web.mit.edu/torralba/www/"><b>Antonio Torralba</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="http://web.mit.edu/cocosci/josh.html"><b>Joshua B. Tenenbaum</b></a>
+                <a href="http://people.csail.mit.edu/ganchuang/"><b>Chuang Gan</b></a> &nbsp;&nbsp;&nbsp; &nbsp;
+
+                <br><br>
+            </div>
+        </div>
+
+        <br><br>
+
+
+        <div class="container">
+            <h3 id="RFSleep" style="padding-top: 80px; margin-top: -80px;">Abstract:</h3>
+            <hr>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    Objects’ motions in nature are governed by complex interactions and their properties.
+                    While some properties, such as shape and material, can be identified via the object’s visual appearances, others like mass and electric charge are not directly visible. The compositionality between the visible and hidden properties poses unique challenges for AI models to reason from the physical world, whereas humanscan effortlessly infer them with limited observations.  Existing studies on video reasoning mainly focus on visually observable elements such as object appearance, movement, and contact interaction. In this paper, we take an initial step to highlight the importance of inferring the hidden physical properties not directly observable from visual appearances, by introducing the Compositional Physical Reasoning(ComPhy) dataset. For a given set of objects, ComPhy includesfewvideos of them moving and interacting under different initial conditions. The model is evaluated based on its capability to unravel the compositional hidden properties, such as mass and charge, and use this knowledge to answer a set of questions posted on one of the videos. Evaluation results of several state-of-the-art video reasoning models on ComPhy show unsatisfactory performance as they fail to capture these hidden properties. We further propose an oracle neural-symbolic framework named Compositional Physics Learner (CPL), combining visual perception, physical property learning, dynamic prediction, and symbolic execution into a unified framework. CPL can effectively identify objects’ physical properties from their interactions and predict their dynamics to answer questions.
+                </div>
+                <br>
+                <div style='margin-top: 280px'>
+                 <div class="col-md-10 col-md-offset-1">
+                    <center>
+                    <img class="img-responsive img-rounded" src="dataset.png"   alt="">
+                    </center>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="container">
+            <h3 id="Paper" style="padding-top: 80px; margin-top: -80px;">Paper:</h3>
+            <hr>
+            <div class="row">
+                <div class="col-md-9">
+                    <a href=""><b>
+                            ComPhy: Compositional Physical Reasoning ofObjects and Events from Videos
+                        </b><br></a>
+                    Zhenfang Chen, Kexin Yi, Yunzhu Li, Mingyu Ding, Antonio Torralba, Joshua B. Tenenbaum, Chuang Gan<br>    
+                    <a href="">[PDF]</a>  &nbsp;&nbsp; <a href="">[CODE]</a>
+                </div>
+            </div>
+        </div><br><br>
+
+
+        <!-- -->
+        <div class="container">
+            <h3 id="Dataset" style="padding-top: 80px; margin-top: -80px;">Dataset</h3>
+            <hr>
+            <div class="row">
+                <div class="col-md-9">
+                     <a href='' class='download-link'>Training Videos</a>, 
+                     <a href='' class='download-link'>Annotations</a>, 
+                     <a href='' class='download-link' >Questions and Answers </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                     <a href="" class='download-link'> Validation Videos</a>, 
+                     <a href="" class='download-link'> Annotations</a>, 
+                     <a href="" class='download-link'> Questions and Answers</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                     <a href="" class='download-link' >Testing Videos</a>, 
+                     <a href="" class='download-link'> Questions </a>
+                </div>
+            </div>
+        </div><br><br>
+        
+        <!-- -->
+        <div class="container">
+            <h3 id="Example" style="padding-top: 80px; margin-top: -80px;">Example</h3>
+            <hr>
+        <div class="panel-group" style="margin-top:30px">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <tr>
+                    <center>
+                    <table><tr>
+                        <td>
+                            <center>
+                                <img class="rounded" src = "figs/sim_11006/sim_11006_0.mp4.gif" height="145px" align="absmiddle"></img>
+                                <figcaption> Reference Video <strong>1</strong> </figcaption>
+                            </center>
+                        </td>
+                        <td>
+                            &nbsp &nbsp
+                        </td>
+                        <td>
+                             <center>
+                                <img class="rounded" src = "figs/sim_11006/sim_11006_1.mp4.gif" height="145px" align="absmiddle"></img>
+                                <figcaption> Reference Video <strong>2</strong> </figcaption>
+                             </center>
+                        </td>
+                        <td>
+                            &nbsp &nbsp
+                        </td>
+                        <td>
+                             <center>
+                                <img class="rounded" src = "figs/sim_11006/sim_11006_2.mp4.gif" height="145px" align="absmiddle"></img>
+                                <figcaption> Reference Video <strong>3</strong> </figcaption>
+                             </center>
+                        </td>
+                        <td>
+                            &nbsp &nbsp
+                        </td>
+                        <td>
+                             <center>
+                                <img class="rounded" src = "figs/sim_11006/sim_11006_3.mp4.gif" height="145px" align="absmiddle"></img>
+                                <figcaption> Reference Video <strong>4</strong> </figcaption>
+                             </center>
+                        </td>
+                    </tr></table>
+                    <div class="test">
+                        <img class="rounded" src = "figs/sim_11006/sim_11006.mp4.gif" height="180px" align="absmiddle" ></img>
+                        <figcaption>  <strong>Target</strong> Video</figcaption>
+                    </div>
+                    </center>
+                    </div>
+                </tr>
+
+                <div style="margin-left: 30px; margin-bottom: 30px">
+                    <p class="text-left"><strong>Question 1</strong>: Is the cyan cube heavier than the rubber cylinder?</p>
+                    <p class="text-left"<strong>Answer 1</strong>: No.</p>
+                </div>
+
+                <div style="margin-left: 30px; margin-bottom: 30px">
+                    <p class="text-left"><strong>Question 2</strong> Are there any uncharged blue cylinders that enter the scene?</p>
+                    <p class="text-left"><strong>Answer 2</strong>: Yes.</p>
+                </div>
+
+                <div style="margin-left: 30px; margin-bottom: 30px">
+                    <p class="text-left"><strong>Question 3</strong></font>: What will happen next?</p>
+                        1. The rubber cylinder and the metal object collide (<strong>True</strong>) &nbsp; &nbsp; &nbsp; &nbsp; 
+                        <br>
+                        2. The rubber cylinder and the sphere collide (<strong>True</strong>)&nbsp; &nbsp; &nbsp; &nbsp;
+                        <br>
+                        3. The cube collides with the sphere  (<strong>False</strong>)&nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+
+                <div style="margin-left: 30px; margin-bottom: 30px">
+                    <p class="text-left"><strong>Question 4</strong>: If the rubber cylinder were lighter, which of the following would happen?</p>
+                        1. The cube would collide with the rubber cylinder (<strong>True</strong>)&nbsp; &nbsp; &nbsp; &nbsp; 
+                        <br>
+                        2. The rubber cylinder and the sphere would collide (<strong>True</strong>)&nbsp; &nbsp; &nbsp; &nbsp;
+                        <br>
+                        3. The metal object would collide with the sphere (<strong>False</strong>)&nbsp; &nbsp; &nbsp; &nbsp;
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+            <!--
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+	<div class="embed-responsive embed-responsive-16by9">
+    	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bnTGLo_wb-Y" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </div>
+	-->
+        </div><br><br>
+
+    </main>
+
+</body>
+
+</html>
