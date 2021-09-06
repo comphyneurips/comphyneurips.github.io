@@ -52,7 +52,7 @@
             <a href="#abstract">Abstract</a>
             <a href="#example">Example</a>
             <a href="#dataset">Dataset</a>
-            <a href="#paper">Paper</a>
+            <a href="#paper">Paper & Code</a>
         </p>
     </div>
     <section id="overview" class="title">
@@ -101,27 +101,80 @@
                     <h4>Questions</h4>
                     <tag><span>Factual Question</span></tag>
                     <p class="ques">Is the cyan cube heavier than the rubber cylinder?</p>
-                    <p class="ans">Yes</p><br>
+                    <p class="ans">No.</p><br>
                     <p class="ques">Are there any uncharged blue cylinders that enter the scene</p>
-                    <p class="ans">Yes</p><br>
+                    <p class="ans">Yes.</p><br>
                     <tag><span>Counterfactual Question</span></tag>
-                    <p class="ques">What will happen next?</p>
-                    <p class="choice true"><i class="fa fa-check-circle"></i> The rubber cylinder and the metal object collide</p><br>
-                    <p class="choice true"><i class="fa fa-check-circle"></i> The rubber cylinder and the sphere collide</p><br>
-                    <p class="choice false"><i class="fa fa-times-circle"></i> The cube collides with the sphere</p><br>
-                    <tag><span>Predictive Question</span></tag>
                     <p class="ques">If the rubber cylinder were lighter, which of the following would happen?</p>
                     <p class="choice true"><i class="fa fa-check-circle"></i> The cube would collide with the rubber cylinder</p><br>
                     <p class="choice true"><i class="fa fa-check-circle"></i> The rubber cylinder and the sphere would collide</p><br>
                     <p class="choice false"><i class="fa fa-times-circle"></i> The metal object would collide with the sphere </p>
+                    <tag><span>Predictive Question</span></tag>
+                    <p class="ques">What will happen next?</p>
+                    <p class="choice true"><i class="fa fa-check-circle"></i> The rubber cylinder and the metal object collide</p><br>
+                    <p class="choice true"><i class="fa fa-check-circle"></i> The rubber cylinder and the sphere collide</p><br>
+                    <p class="choice false"><i class="fa fa-times-circle"></i> The cube collides with the sphere</p><br>
                 </div>
             </div>
         </div>
         <div id="example2">
-            This is an empty example 2
+                <div class="videos">
+                    <h4>Target Video</h4>
+                    <img class="targetvid" src="figs/sim_10005/sim_10005.mp4.gif">
+                    <h4><br>Reference Videos</h4>
+                    <img class="referencevid" src="figs/sim_10005/sim_10005_0.mp4.gif">
+                    <img class="referencevid" src="figs/sim_10005/sim_10005_1.mp4.gif">
+                    <img class="referencevid" src="figs/sim_10005/sim_10005_2.mp4.gif">
+                    <img class="referencevid" src="figs/sim_10005/sim_10005_3.mp4.gif">
+                </div>
+                <div class="questions">
+                    <h4>Questions</h4>
+                    <tag><span>Factual Question</span></tag>
+                    <p class="ques">What are the colors of the two objects that are charged?</p>
+                    <p class="ans">Yellow and blue.</p><br>
+                    <p class="ques">What is the direction of the blue cube when the video ends?</p>
+                    <p class="ans">Left.</p><br>
+                    <tag><span>Counterfactual Question</span></tag>
+                    <p class="ques">If the blue sphere were oppositely charged, what would happen?</p>
+                    <p class="choice true"><i class="fa fa-check-circle"></i>The yellow sphere and the rubber cube would collide</p><br>
+                    <p class="choice true"><i class="fa fa-check-circle"></i>The yellow object and the blue sphere would collide</p><br>
+                    <p class="choice false"><i class="fa fa-times-circle"></i> The blue cube and the metal cube would collide</p>
+                    <p class="choice false"><i class="fa fa-times-circle"></i> The yellow object and the red object would collide</p>
+                    <tag><span>Predictive Question</span></tag>
+                    <p class="ques">What will happen next?</p>
+                    <p class="choice true"><i class="fa fa-check-circle"></i>The blue cube and the red cube collide</p><br>
+                    <p class="choice false"><i class="fa fa-times-circle"></i>The blue sphere collides with the metal cube</p><br>
+                </div>
         </div>
         <div id="example3">
-            This is an empty example 2
+                <div class="videos">
+                    <h4>Target Video</h4>
+                    <img class="targetvid" src="figs/sim_10002/sim_10002.mp4.gif">
+                    <h4><br>Reference Videos</h4>
+                    <img class="referencevid" src="figs/sim_10002/sim_10002_0.mp4.gif">
+                    <img class="referencevid" src="figs/sim_10002/sim_10002_1.mp4.gif">
+                    <img class="referencevid" src="figs/sim_10002/sim_10002_2.mp4.gif">
+                    <img class="referencevid" src="figs/sim_10002/sim_10002_3.mp4.gif">
+                </div>
+                <div class="questions">
+                    <h4>Questions</h4>
+                    <tag><span>Factual Question</span></tag>
+                    <p class="ques">What color is the moving rubber object that is uncharged?</p>
+                    <p class="ans">Red.</p><br>
+                    <p class="ques">How many moving cyan objects are charged?</p>
+                    <p class="ans">1.</p><br>
+                    <tag><span>Counterfactual Question 1</span></tag>
+                    <p class="ques">If the sphere were oppositely charged, which of the following would happen?
+</p>
+                    <p class="choice true"><i class="fa fa-check-circle"></i>The cylinder and the sphere would collide</p><br>
+                    <p class="choice false"><i class="fa fa-times-circle"></i>The cylinder would collide with the cyan cube</p>
+                    <tag><span>Counterfactual Question 2</span></tag>
+                    <p class="ques">If the cyan object were uncharged, which event would happen?</p>
+                    <p class="choice true"><i class="fa fa-check-circle"></i>The sphere and the cyan object would collide</p><br>
+                    <p class="choice true"><i class="fa fa-check-circle"></i>The cylinder would collide with the sphere</p><br>
+                    <p class="choice false"><i class="fa fa-times-circle"></i>The cylinder would collide with the gray cube</p><br>
+                    <p class="choice false"><i class="fa fa-times-circle"></i>The sphere would collide with the yellow object</p>
+                </div>
         </div>
     </section>
     <hr>
@@ -141,13 +194,14 @@
     </section>
     <hr>
     <section id="paper" class="accesspaper">
-        <p><b>Access Paper</b><br>
+        <h3>Access Paper & Code</h3> <br>
+
             ComPhy: Compositional Physical Reasoning of Objects and Events from Videos<br>
             Zhenfang Chen, Kexin Yi, Yunzhu Li, Mingyu Ding, Antonio Torralba, Joshua B. Tenenbaum, Chuang Gan<br>
         </p>
         <p>
             <a href="https://openreview.net/pdf?id=wgQoeAdyk11"><i class="fa fa-file-pdf-o"></i></a>
-            <a href="https://github.com/zfchenUnique/executor_comphy.git"><i class="fa fa-code"></i></a>
+            <a href="https://github.com/zfchenUnique/executor_comphy.git"><i class="fa fa-github"></i></a>
         </p>
     </section>
     <hr>
